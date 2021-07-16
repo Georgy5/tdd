@@ -1,4 +1,5 @@
 class FizzBuzz
-  def play()
+  def play(number)
+    number
   end
 end
