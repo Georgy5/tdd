@@ -1,8 +1,6 @@
 require_relative '../src/fizz_buzz'
 
-describe "FizzBuzz game" do
-  subject { FizzBuzz.new }
-  
+describe FizzBuzz do
   describe "#play" do
     it 'is expected to return 1 if given 1' do
       expect(subject.play(1)).to eq 1
