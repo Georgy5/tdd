@@ -1,7 +1,7 @@
 require_relative '../src/fizz_buzz'
 
-describe FizzBuzz do
-  #let(:game) { FizzBuzz.new }
+describe "FizzBuzz game" do
+  subject { FizzBuzz.new }
   
   describe "#play" do
     it 'is expected to return 1 if given 1' do
