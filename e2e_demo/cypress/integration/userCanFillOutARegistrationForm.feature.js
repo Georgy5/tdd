@@ -18,5 +18,5 @@ describe('user that fills out a registration form', () => {
         'Thank you for registering!'
       );
     });
-  })
-})
+  });
+});

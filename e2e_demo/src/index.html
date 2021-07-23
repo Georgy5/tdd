@@ -8,6 +8,20 @@
 </head>
 <body>
   <h1>Hello User!</h1>
-  </h1>
+  <form id="r-form" data-cy="registration-form">
+    <input type="text" data-cy="email">
+    <input type="text" data-cy="password">
+    <input type="text" value="Submit" data-cy="submit">
+  </form>
+  <div id="confirmation-message" data-cy="confirmation-message"></div>
+
+  <script>
+    const form = document.getElementById('r-form')
+    const messageNode = document.getElementById('confirmation-message')
+    form.addEventListener('submit', event => {
+      event.preventDefault()
+      messageNode.innerHTML = `<h2>Thank you for registering!</h2>`
+    })
+  </script>
 </body>
 </html>
