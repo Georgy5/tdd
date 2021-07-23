@@ -2,5 +2,9 @@
   "name": "e2e_demo",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^8.0.0",
+    "superstatic": "^7.1.0"
+  }
 }
