@@ -1,7 +1,7 @@
 describe('user that navigates to the application', () => {
 
   before(() => {
-    crypto.visit('http://localhost:3474')
+    cy.visit('http://localhost:3474')
   });
 
   it('is expected to see a welcome message', () => {
