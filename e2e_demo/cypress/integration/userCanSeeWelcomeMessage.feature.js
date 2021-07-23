@@ -5,6 +5,6 @@ describe('user that navigates to the application', () => {
   });
 
   it('is expected to see a welcome message', () => {
-    cy.get('h1').should('contain.text', 'Hello user!')
+    cy.get('h1').should('contain.text', 'Hello User!')
   })
 })
