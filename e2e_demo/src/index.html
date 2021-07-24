@@ -9,7 +9,7 @@
 <body>
   <h1>Hello User!</h1>
   <form id="r-form" data-cy="registration-form">
-    <input type="text" data-cy="email">
+    <input type="text" name="email" data-cy="email">
     <input type="text" data-cy="password">
     <input type="submit" value="Submit" data-cy="submit">
   </form>
@@ -20,7 +20,11 @@
     const messageNode = document.getElementById('confirmation-message')
     form.addEventListener('submit', event => {
       event.preventDefault()
-      messageNode.innerHTML = `<h2>Thank you for registering!</h2>`
+      if (form.children.email.value === '') {
+        messageNode.innerHTML = `You need to fill in your email address`
+      } else {
+        messageNode.innerHTML = `<h2>Thank you for registering!</h2>`
+      }
     })
   </script>
 </body>
