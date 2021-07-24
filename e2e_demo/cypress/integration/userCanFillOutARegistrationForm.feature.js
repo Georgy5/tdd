@@ -19,4 +19,23 @@ describe('user that fills out a registration form', () => {
       );
     });
   });
+
+  describe('with invalid information', () => {
+
+    before(() => {
+      cy.visit('http://localhost:3474')
+      
+      cy.get('[data-cy=registration-form]').within(() => {
+        cy.get('[data-cy=password]').type('password')
+        cy.get('[data-cy=submit]').click()
+      })
+    });
+
+    it('is expected to see an error message', () => {
+      cy.get('[data-cy=confirmation-message]').should(
+        'contain.text',
+        'You need to fill in your email address'
+      );
+    });
+  });
 });
