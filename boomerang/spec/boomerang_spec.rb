@@ -20,4 +20,8 @@ describe Boomerang do
   it 'is expected to return 0 if given an empty array' do
     expect(subject.count([])).to eq (0)
   end
+
+  it 'is expected to return 0 if given 55555' do
+    expect(subject.count([5, 5, 5, 5, 5])).to eq (0)
+  end
 end
