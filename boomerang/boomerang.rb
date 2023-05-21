@@ -9,13 +9,13 @@
 
 class Boomerang
   def count(ary)
-    count = 0
     return 0 unless ary.size >= 3
-
-    if ary[0] == ary[2] and ary[0] != ary[1]
-      # Found a boomerang
-      count += 1
-      return count
+    count = 0
+    ary.each_with_index do |number, index|
+      if ary[index] == ary[index + 2] and ary[index] != ary[index + 1]
+        count += 1
+      end
     end
+    count
   end
 end
