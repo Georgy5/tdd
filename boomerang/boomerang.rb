@@ -14,15 +14,24 @@ class Boomerang
     if ary.length < 3
       return none_found_message
     end
-    counter = 0
-    ary.each_with_index do |number, index|
+  
+    boomerang_counter = 0
+    boomerang_list = []
+    ary.each_with_index do |_, index|
+      boom_ary = []
       if ary[index] == ary[index + 2] and ary[index] != ary[index + 1]
-        counter += 1
+        boomerang_counter += 1
+        boom_ary << ary[index]
+        boom_ary << ary[index + 1]
+        boom_ary << ary[index + 2]
       end
+      boomerang_list << boom_ary unless boom_ary.empty?
     end
-
-    if counter == 0
+  
+    if boomerang_counter == 0
       return none_found_message
     end
+  
+    return "#{boomerang_counter} Boomerang found: #{boomerang_list}"
   end
 end
