@@ -12,4 +12,8 @@ describe Boomerang do
   it 'is expected to return 2 if given 1212' do
     expect(subject.count([1, 2, 1, 2])).to eq (2)
   end
+
+  it 'is expected to return 3 if given 121234565' do
+    expect(subject.count([1, 2, 1, 2, 3, 4, 5, 6, 5])).to eq (3)
+  end
 end
