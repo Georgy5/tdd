@@ -32,6 +32,14 @@ class Boomerang
       return none_found_message
     end
   
-    return "#{boomerang_counter} Boomerang found: #{boomerang_list}"
+    return "#{pluralize_boomerangs(boomerang_counter)} found: #{boomerang_list}"
+  end
+
+  def pluralize_boomerangs(boomerang_counter)
+    if boomerang_counter == 1
+      "#{boomerang_counter} Boomerang"
+    else
+      "#{boomerang_counter} Boomerangs"
+    end
   end
 end
