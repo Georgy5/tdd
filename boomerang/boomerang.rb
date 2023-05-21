@@ -9,11 +9,13 @@
 
 class Boomerang
   def count(ary)
+    count = 0
     return 0 unless ary.size >= 3
 
     if ary[0] == ary[2] and ary[0] != ary[1]
       # Found a boomerang
-      return 1
+      count += 1
+      return count
     end
   end
 end
