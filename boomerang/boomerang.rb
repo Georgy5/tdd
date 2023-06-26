@@ -36,10 +36,6 @@ class Boomerang
   end
 
   def pluralize_boomerangs(boomerang_counter)
-    if boomerang_counter == 1
-      "#{boomerang_counter} Boomerang"
-    else
-      "#{boomerang_counter} Boomerangs"
-    end
+    "#{boomerang_counter} Boomerang#{'s' if boomerang_counter > 1}"
   end
 end
