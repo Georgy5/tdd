@@ -26,16 +26,12 @@ class PaginationHelper
 
   def make_pages
     pages = []
-    count = page_count
-    if remainder.nonzero?
-      pages.insert(0, @collection.pop(remainder))
-      count -= 1
-    end
-    count.times { pages.insert(0, @collection.pop(@items_per_page)) }
-    pages
+    return pages if page_count.nil? || page_count.zero?
+    pages = @collection.each_slice(@items_per_page).to_a
   end
 
   def guard_clause(index)
+    return -1 if page_count.nil?
     if index >= page_count || index < 0
       return -1
     end
