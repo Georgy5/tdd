@@ -16,3 +16,34 @@ or 010011 would also represent decimal 11. For a true Zeckendorf number there is
 Your task is to generate and show here a table of the Zeckendorf number representations of the decimal numbers zero to twenty, in order.
 
 [Source http://rosettacode.org]
+
+Did this kata with Rspec, but here is an example of a Cucmber feature:
+
+Feature: zeckendorf calculator
+
+Scenario Outline: all the numbers from 0 to 20
+  Given decimal is <decimal>
+  Then expect <zeckendorf>
+  Examples:
+  |decimal|zeckendorf|
+  | 0     | 0        |
+  | 1     | 1        |
+  | 2     | 10       |
+  | 3     | 100      |
+  | 4     | 101      |
+  | 5     | 1000     |
+  | 6     | 1001     |
+  | 7     | 1010     |
+  | 8     | 10000    |
+  | 9     | 10001    |
+  | 10    | 10010    |
+  | 11    | 10100    |
+  | 12    | 10101    |
+  | 13    | 100000   |
+  | 14    | 100001   |
+  | 15    | 100010   |
+  | 16    | 100100   |
+  | 17    | 100101   |
+  | 18    | 101000   |
+  | 19    | 101001   |
+  | 20    | 101010   |
