@@ -36,4 +36,10 @@ describe Boomerang do
       "This list does not contain any Boomerangs"
     )
   end
+
+  it 'is expected to return none_found message if given 111' do
+    expect(subject.find([1, 1, 1])).to eq (
+      "This list does not contain any Boomerangs"
+    )
+  end
 end
