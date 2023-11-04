@@ -7,11 +7,14 @@ describe "#last_digit" do
   end
   context "last digits that always equal a" do
     it "should return the last digit" do
+      expect(last_digit(1, 5)).to eq(1)
+    end
+  
+    it "should return the last digit" do
       expect(last_digit(5, 5)).to eq(5)
     end
 
     it "should return the last digit" do
-      skip
       expect(last_digit(6, 5)).to eq(6)
     end
   end
