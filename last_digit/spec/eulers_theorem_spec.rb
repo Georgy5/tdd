@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require_relative "../eulers_theorem"
 
 describe "#last_digit" do
   it "should return the last digit of 0^0" do
