@@ -7,7 +7,7 @@ describe "#last_digit" do
   end
 
   it "should return the last digit of 0^5" do
-    expect(last_digit(0, 0)).to eq(0)
+    expect(last_digit(0, 5)).to eq(0)
   end
 
   context "last digits that always equal a" do
