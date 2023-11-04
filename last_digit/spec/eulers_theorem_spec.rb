@@ -33,5 +33,9 @@ describe "#last_digit" do
     it "should return the last digit of a large number" do
       expect(last_digit(10, 10**10)).to eq(0)
     end
+
+    it "should return the last digit of a large number" do
+      expect(last_digit(2**200, 2**300)).to eq(6)
+    end
   end
 end
