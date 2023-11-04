@@ -1,3 +1,8 @@
+# Here is the simplest, shortest solution from Codewars
+# def last_digit(a, b)
+#   a.pow(b, 10)
+# end
+
 CONSTANT_LAST_DIGITS = [1, 5, 6].freeze
 
 def last_digit(a, b)
