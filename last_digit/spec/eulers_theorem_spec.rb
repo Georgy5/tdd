@@ -9,7 +9,7 @@ describe "#last_digit" do
     it "should return the last digit" do
       expect(last_digit(1, 5)).to eq(1)
     end
-  
+
     it "should return the last digit" do
       expect(last_digit(5, 5)).to eq(5)
     end
@@ -19,12 +19,13 @@ describe "#last_digit" do
     end
   end
 
-  context "last digits that don't always equal a", skip: "unimplemented" do
+  context "last digits that don't always equal a" do
     it "should return the last digit of a number" do
       expect(last_digit(4, 1)).to eq(4)
     end
 
     it "should return the last digit of a number" do
+      skip
       expect(last_digit(4, 2)).to eq(6)
     end
   end
