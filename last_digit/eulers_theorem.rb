@@ -8,5 +8,5 @@ def last_digit(a, b)
   # euler's theorem
   b % 4 == 0 ? res = 4 : res = b % 4
 
-  last_digit = a**res
+  last_digit = a**res % 10
 end

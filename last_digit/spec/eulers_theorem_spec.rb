@@ -29,7 +29,7 @@ describe "#last_digit" do
     end
   end
 
-  context "large numbers", skip: "unimplemented" do
+  context "large numbers"do
     it "should return the last digit of a large number" do
       expect(last_digit(10, 10**10)).to eq(0)
     end
