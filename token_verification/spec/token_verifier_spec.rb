@@ -1,6 +1,6 @@
-require_relative '../token_validator'
+require_relative '../token_verifier'
 
-describe TokenValidator do
+describe TokenVerifier do
   it 'is expected that "-" removed, "/" replaces "!" and "+" replaces "$"' do
     expect(subject.transform("Karl-G30r-GKel-ler!-$em!")).to eq("KarlG30rGKeller/+em/")
   end

@@ -1,4 +1,4 @@
-class TokenValidator
+class TokenVerifier
   def transform(str)
     str.gsub('-', '').gsub('!', '/').gsub('$', '+')
   end
