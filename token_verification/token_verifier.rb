@@ -2,7 +2,7 @@ require 'base64'
 
 class TokenVerifier
   def transform(str)
-    str.gsub('-', '').gsub('!', '/').gsub('$', '+')
+    str.delete('-').gsub('!', '/').gsub('$', '+')
   end
 
   def plausible?(str)
