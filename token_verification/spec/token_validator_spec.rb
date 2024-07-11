@@ -6,6 +6,6 @@ describe TokenValidator do
   end
 
   it 'is expected that the 15 bytes combined with XOR will yield 0' do
-    expect(subject.plausible?("Karl-G30r-GKel-ler5-KaRl")).to eq(0)
+    expect(subject.plausible?("QUBs-WTOX-hEmh-6fY2-FGSl")).to eq(0)
   end
 end
